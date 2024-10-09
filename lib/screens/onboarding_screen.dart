@@ -1,3 +1,4 @@
+import 'package:coffee_shop_mobile_apps/screens/index.dart';
 import 'package:coffee_shop_mobile_apps/utils/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -64,7 +65,14 @@ class OnboardingScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: FilledButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomeScreen(),
+                          ),
+                        );
+                      },
                       style: ButtonStyle(
                         backgroundColor: WidgetStateProperty.all<Color>(
                           const Color.fromRGBO(198, 124, 78, 1),
