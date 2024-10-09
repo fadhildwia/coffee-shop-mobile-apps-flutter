@@ -1,4 +1,4 @@
-import 'package:coffee_shop_mobile_apps/screens/index.dart';
+import 'package:coffee_shop_mobile_apps/screens/bottom_navigation_screen.dart';
 import 'package:coffee_shop_mobile_apps/utils/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -69,7 +69,8 @@ class OnboardingScreen extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomeScreen(),
+                            builder: (context) =>
+                                const BottomNavigationScreen(),
                           ),
                         );
                       },

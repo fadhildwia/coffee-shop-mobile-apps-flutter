@@ -1,14 +1,14 @@
 import 'package:coffee_shop_mobile_apps/widgets/bottom_navigation.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class BottomNavigationScreen extends StatefulWidget {
+  const BottomNavigationScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<BottomNavigationScreen> createState() => _BottomNavigationScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _BottomNavigationScreenState extends State<BottomNavigationScreen> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [

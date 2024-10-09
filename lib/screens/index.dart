@@ -1,2 +1,2 @@
 export 'onboarding_screen.dart';
-export 'home_screen.dart';
+export 'bottom_navigation_screen.dart';
