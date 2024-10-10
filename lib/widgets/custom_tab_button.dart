@@ -20,7 +20,7 @@ class CustomTabButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           backgroundColor: isSelected
               ? const Color.fromRGBO(198, 124, 78, 1)
-              : const Color.fromRGBO(254, 54, 54, 3.5),
+              : const Color.fromARGB(255, 248, 177, 177),
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
