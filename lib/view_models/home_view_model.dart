@@ -20,6 +20,7 @@ class HomeViewModel extends ChangeNotifier {
 
   final List<CoffeeProduct> coffeeProducts = [
     CoffeeProduct(
+      id: '1',
       productName: 'Macchiato',
       detail: 'Rich espresso topped with frothy milk.',
       price: 4.50,
@@ -27,6 +28,7 @@ class HomeViewModel extends ChangeNotifier {
       score: 4.5,
     ),
     CoffeeProduct(
+      id: '2',
       productName: 'Latte',
       detail: 'Smooth espresso with steamed milk.',
       price: 4.00,
@@ -34,6 +36,7 @@ class HomeViewModel extends ChangeNotifier {
       score: 4.7,
     ),
     CoffeeProduct(
+      id: '3',
       productName: 'Americano',
       detail: 'Espresso diluted with hot water.',
       price: 3.50,
@@ -41,6 +44,7 @@ class HomeViewModel extends ChangeNotifier {
       score: 4.3,
     ),
     CoffeeProduct(
+      id: '4',
       productName: 'Americano',
       detail: 'Espresso diluted with hot water.',
       price: 3.50,
@@ -48,6 +52,7 @@ class HomeViewModel extends ChangeNotifier {
       score: 4.3,
     ),
     CoffeeProduct(
+      id: '5',
       productName: 'Americano',
       detail: 'Espresso diluted with hot water.',
       price: 3.50,

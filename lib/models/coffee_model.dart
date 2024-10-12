@@ -5,6 +5,7 @@ class CoffeeModel {
 }
 
 class CoffeeProduct {
+  final String id;
   final String productName;
   final String detail;
   final double price;
@@ -12,6 +13,7 @@ class CoffeeProduct {
   final double score;
 
   CoffeeProduct({
+    required this.id,
     required this.productName,
     required this.detail,
     required this.price,
