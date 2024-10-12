@@ -6,8 +6,8 @@ import '../view_models/home_view_model.dart';
 
 class ProductGrid extends StatelessWidget {
   final HomeViewModel viewModel;
-  final Function(CoffeeProduct) onPressedCard;
-  final Function(CoffeeProduct) onPressedPlus;
+  final Function(CoffeeProduct product) onPressedCard;
+  final Function(CoffeeProduct product) onPressedPlus;
 
   const ProductGrid({
     super.key,

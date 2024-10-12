@@ -149,13 +149,15 @@ class HomeScreen extends StatelessWidget {
                       ),
                       ProductGrid(
                         viewModel: viewModel,
-                        onPressedCard: (data) => {
+                        onPressedCard: (product) {
+                          print(product);
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const DetailProductScreen(),
+                              builder: (context) =>
+                                  DetailProductScreen(data: product),
                             ),
-                          ),
+                          );
                         },
                         onPressedPlus: (context) => {},
                       ),
