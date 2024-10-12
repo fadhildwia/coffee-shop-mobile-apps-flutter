@@ -1,3 +1,4 @@
+import 'package:coffee_shop_mobile_apps/utils/assets.dart';
 import 'package:flutter/material.dart';
 import '../models/coffee_model.dart';
 
@@ -15,6 +16,44 @@ class HomeViewModel extends ChangeNotifier {
     CoffeeModel('Cold Brew'),
     CoffeeModel('Affogato'),
     CoffeeModel('Irish Coffee'),
+  ];
+
+  final List<CoffeeProduct> coffeeProducts = [
+    CoffeeProduct(
+      productName: 'Macchiato',
+      detail: 'Rich espresso topped with frothy milk.',
+      price: 4.50,
+      imageUrl: '${AssetPath.imagePath}/coffee-1.png',
+      score: 4.5,
+    ),
+    CoffeeProduct(
+      productName: 'Latte',
+      detail: 'Smooth espresso with steamed milk.',
+      price: 4.00,
+      imageUrl: '${AssetPath.imagePath}/coffee-2.png',
+      score: 4.7,
+    ),
+    CoffeeProduct(
+      productName: 'Americano',
+      detail: 'Espresso diluted with hot water.',
+      price: 3.50,
+      imageUrl: '${AssetPath.imagePath}/coffee-3.png',
+      score: 4.3,
+    ),
+    CoffeeProduct(
+      productName: 'Americano',
+      detail: 'Espresso diluted with hot water.',
+      price: 3.50,
+      imageUrl: '${AssetPath.imagePath}/coffee-4.png',
+      score: 4.3,
+    ),
+    CoffeeProduct(
+      productName: 'Americano',
+      detail: 'Espresso diluted with hot water.',
+      price: 3.50,
+      imageUrl: '${AssetPath.imagePath}/coffee-5.png',
+      score: 4.3,
+    ),
   ];
 
   void selectCoffee(CoffeeModel coffee) {
