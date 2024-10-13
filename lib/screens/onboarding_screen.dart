@@ -13,91 +13,92 @@ class OnboardingScreen extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.black,
-      body: Stack(
-        children: [
-          Container(
-            height: imageHeight,
-            width: double.infinity,
-            child: Image.asset(
-              '${AssetPath.imagePath}/coffee-6.png',
-              fit: BoxFit.cover,
-            ),
-          ),
-          Align(
-            alignment: Alignment.bottomCenter,
-            child: Container(
-              padding: EdgeInsets.all(24),
-              alignment: Alignment.bottomCenter,
-              height: textAreaHeight,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.black.withOpacity(0.1),
-                    Colors.black,
-                  ],
-                  begin: Alignment.topCenter,
-                  end: Alignment.center,
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          bool isWeb = constraints.maxWidth > 600;
+
+          return Stack(
+            children: [
+              Container(
+                height: imageHeight,
+                width: double.infinity,
+                color: Colors.black,
+                child: Center(
+                  child: Image.asset(
+                    '${AssetPath.imagePath}/coffee-6.png',
+                    fit: BoxFit.contain,
+                    width: isWeb ? 532 : constraints.maxWidth * 2 / 3,
+                    height: isWeb ? 800 : null,
+                  ),
                 ),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  const Text(
-                    'Fall in Love with Coffee in Blissful Delight!',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 32,
-                      fontWeight: FontWeight.w600,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 8),
-                  const Text(
-                    'Welcome to our cozy coffee corner, where every cup is a delightful for you.',
-                    style: TextStyle(
-                      color: Color.fromRGBO(162, 162, 162, 1),
-                      fontSize: 14,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 32),
-                  SizedBox(
-                    width: double.infinity,
-                    child: FilledButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const BottomNavigationScreen(),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  padding: EdgeInsets.all(24),
+                  alignment: Alignment.bottomCenter,
+                  width: double.infinity,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      const Text(
+                        'Fall in Love with Coffee in Blissful Delight!',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 32,
+                          fontWeight: FontWeight.w600,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 8),
+                      const Text(
+                        'Welcome to our cozy coffee corner, where every cup is a delightful for you.',
+                        style: TextStyle(
+                          color: Color.fromRGBO(162, 162, 162, 1),
+                          fontSize: 14,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                      const SizedBox(height: 32),
+                      SizedBox(
+                        width: double.infinity,
+                        child: FilledButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const BottomNavigationScreen(),
+                              ),
+                            );
+                          },
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStateProperty.all<Color>(
+                              const Color.fromRGBO(198, 124, 78, 1),
+                            ),
+                            padding: WidgetStateProperty.all<EdgeInsets>(
+                              const EdgeInsets.symmetric(vertical: 16.0),
+                            ),
+                            shape:
+                                WidgetStateProperty.all<RoundedRectangleBorder>(
+                              RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16.0),
+                              ),
+                            ),
                           ),
-                        );
-                      },
-                      style: ButtonStyle(
-                        backgroundColor: WidgetStateProperty.all<Color>(
-                          const Color.fromRGBO(198, 124, 78, 1),
-                        ),
-                        padding: WidgetStateProperty.all<EdgeInsets>(
-                          const EdgeInsets.symmetric(vertical: 16.0),
-                        ),
-                        shape: WidgetStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16.0),
+                          child: const Text(
+                            'Get Started',
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
                       ),
-                      child: const Text(
-                        'Get Started',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
-            ),
-          ),
-        ],
+            ],
+          );
+        },
       ),
     );
   }
