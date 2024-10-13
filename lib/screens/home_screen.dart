@@ -51,7 +51,12 @@ class HomeScreen extends StatelessWidget {
                               const SizedBox(height: 8),
                               CustomDropdown(
                                 selectedValue: viewModel.selectedLocation,
-                                items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+                                items: const [
+                                  'Item 1',
+                                  'Item 2',
+                                  'Item 3',
+                                  'Item 4'
+                                ],
                                 onChanged: (value) {
                                   viewModel.selectedLocation = value;
                                 },
@@ -164,12 +169,12 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   Positioned(
-                    top: 200,
+                    top: 180,
                     left: 24,
                     right: 24,
                     child: Image.asset(
                       '${AssetPath.imagePath}/banner.png',
-                      width: double.infinity,
+                      height: 180,
                       fit: BoxFit.fitHeight,
                     ),
                   ),
